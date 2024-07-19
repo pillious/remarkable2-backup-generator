@@ -45,7 +45,7 @@ The location of the backups is set using the `-backupsDir` flag.
 The executable will the compiled to `${GOPATH}/bin/` or `go/bin/`
 
 ### Example usage
-`./remarkable2-backup-generator -l -v -src="root@192.168.1.11:/home/root/.local/share/remarkable/xochitl" -backupsDir="/home/user/rm2-backups/"`
+`./remarkable2-backup-generator -l -v -src="root@192.168.x.x:/home/root/.local/share/remarkable/xochitl" -backupsDir="/home/user/rm2-backups/"`
 
 ### Tool help
 `./remarkable2-backup-generator -h`
