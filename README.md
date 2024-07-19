@@ -1,9 +1,13 @@
 # remarkable2-backup-generator
 
+(Written in Go)
+
+<i><small>Realistically this tool can be used to backup any files.</small></i>
+
 ## Overview
 
 The backup generator incrementally generates backups using rsync (with the --link-dest flag).
-If you are only interested in backing up the notebooks on your Remarkable2, the notebooks are stored at `/home/root/.local/share/remarkable/xochitl`. The directory to copy is set using the `-src` flag.
+If you are interested in _only_ backing up the notebooks on your Remarkable2, the notebooks are stored at `/home/root/.local/share/remarkable/xochitl`. The directory to copy is set using the `-src` flag.
 
 The first time a backup is made, the entire directory set by `-src` is copied from your rm2, so this may take a while.
 The name of the backup is always set to the current timestamp string in ISO 8601 format.
