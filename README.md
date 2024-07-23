@@ -1,9 +1,11 @@
 # remarkable2-backup-generator
 
+<i><small>Realistically this tool can be used to backup any files.</small></i>
+
 ## Overview
 
 The backup generator incrementally generates backups using rsync (with the --link-dest flag).
-If you are only interested in backing up the notebooks on your Remarkable2, the notebooks are stored at `/home/root/.local/share/remarkable/xochitl`. The directory to copy is set using the `-src` flag.
+If you are interested in _only_ backing up the notebooks on your Remarkable2, the notebooks are stored at `/home/root/.local/share/remarkable/xochitl`. The directory to copy is set using the `-src` flag.
 
 The first time a backup is made, the entire directory set by `-src` is copied from your rm2, so this may take a while.
 The name of the backup is always set to the current timestamp string in ISO 8601 format.
@@ -14,8 +16,9 @@ To automate the entire backup process, make sure to set up passwordless SSH into
 
 ## Requirements
 
-1. Have Golang installed
-2. Have the rsync tool avaialble in your terminal (use WSL if you're using Windows). 
+1. Have Golang installed.
+2. Have the rsync tool available in your terminal (use WSL if you're using Windows). 
+3. Make sure you can SSH into your Remarkable.
 
 ## Tool Usage
 
@@ -25,7 +28,7 @@ To automate the entire backup process, make sure to set up passwordless SSH into
 The executable will the compiled to `${GOPATH}/bin/` or `go/bin/`
 
 ### Example usage
-`./remarkable2-backup-generator -l -v -src="root@192.168.1.11:/home/root/.local/share/remarkable/xochitl" -backupsDir="/home/user/rm2-backups/"`
+`./remarkable2-backup-generator -l -v -src="root@192.168.x.x:/home/root/.local/share/remarkable/xochitl" -backupsDir="/home/user/rm2-backups/"`
 
 ### Tool help
 `./remarkable2-backup-generator -h`
