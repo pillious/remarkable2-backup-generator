@@ -12,6 +12,24 @@ On subsequent backups, the file listed in `.latest_backup` is used as the --link
 
 To automate the entire backup process, make sure to set up passwordless SSH into your Remarkable ([Resources](#resources)).
 
+## Requirements
+
+1. Have Golang installed
+2. Have the rsync tool avaialble in your terminal (use WSL if you're using Windows). 
+
+## Tool Usage
+
+### Compile the tool
+`go install ./`
+
+The executable will the compiled to `${GOPATH}/bin/` or `go/bin/`
+
+### Example usage
+`./remarkable2-backup-generator -l -v -src="root@192.168.1.11:/home/root/.local/share/remarkable/xochitl" -backupsDir="/home/user/rm2-backups/"`
+
+### Tool help
+`./remarkable2-backup-generator -h`
+
 ## Backups Structure
 
 The location of the backups is set using the `-backupsDir` flag.
@@ -32,19 +50,6 @@ The location of the backups is set using the `-backupsDir` flag.
 │        └──  ...
 └── ...
 ```
-
-## Tool Usage
-
-### Compile the tool
-`go install ./`
-
-The executable will the compiled to `${GOPATH}/bin/` or `go/bin/`
-
-### Example usage
-`./remarkable2-backup-generator -l -v -src="root@192.168.1.11:/home/root/.local/share/remarkable/xochitl" -backupsDir="/home/user/rm2-backups/"`
-
-### Tool help
-`./remarkable2-backup-generator -h`
 
 ## Acknowledgement
 
