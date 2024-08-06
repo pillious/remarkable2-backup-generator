@@ -14,11 +14,13 @@ On subsequent backups, the file listed in `.latest_backup` is used as the --link
 
 To automate the entire backup process, make sure to set up passwordless SSH into your Remarkable ([Resources](#resources)).
 
+Intersted in backing up your notebooks as PDFs? Check out [RM2 PDF downloader](https://github.com/pillious/remarkable2-pdf-downloader)
+
 ## Requirements
 
 1. Have Golang installed.
 2. Have the rsync tool available in your terminal (use WSL if you're using Windows). 
-3. Make sure you can SSH into your Remarkable.
+3. Make sure you can SSH into your Remarkable ([Guide](https://remarkable.jms1.info/info/ssh.html)).
 
 ## Tool Usage
 
