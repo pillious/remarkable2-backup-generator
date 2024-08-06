@@ -14,7 +14,7 @@ On subsequent backups, the file listed in `.latest_backup` is used as the --link
 
 To automate the entire backup process, make sure to set up passwordless SSH into your Remarkable ([Resources](#resources)).
 
-Intersted in backing up your notebooks as PDFs? Check out [RM2 PDF downloader](https://github.com/pillious/remarkable2-pdf-downloader)
+Interested in backing up your notebooks as PDFs? Check out [RM2 PDF downloader](https://github.com/pillious/remarkable2-pdf-downloader)
 
 ## Requirements
 
